@@ -1,5 +1,8 @@
-# scoreboard
+# Arduino Air Hockey Scoreboard
+
 Rebuild of an air hockey scoreboard a friend of mine blew up with 120v AC...
+
+I plan on making it run on an ESP8266/ESP32, but the 4-digit display/clock library seems to be crashing it at the moment, so I currently have it running on an Arduino Nano (Atmega328p)
 
 Very much a work in progress.
 
