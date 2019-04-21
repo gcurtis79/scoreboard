@@ -1,6 +1,6 @@
 # Arduino Air Hockey Scoreboard
 
-![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/score.jpg "Air Hockey Scoreoard")
+![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/scoreup.jpg "Air Hockey Scoreoard")
 
 Rebuild of an air hockey scoreboard a friend of mine blew up with 120v AC...
 
