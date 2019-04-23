@@ -19,6 +19,8 @@ I plan on making it run on an ESP8266/ESP32, but the 4-digit display/clock libra
 Very much a work in progress.
 
 Working:
+* Score display with almost no flicker
+    * There is a flick every half second then the clock updates
 * Score tracking via interrupt pins
 * "Party mode" when score happens
     * "Party mode" holds untill pin release in case puck gets stuck
