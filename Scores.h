@@ -105,5 +105,4 @@ void showScores() {
   mcp.digitalWrite(8, LOW);
   delay(5);
   mcp.digitalWrite(8, HIGH);
-
 }

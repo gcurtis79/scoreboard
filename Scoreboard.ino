@@ -1,7 +1,8 @@
-#include "Config.h"
+//#include <Arduino.h>
+#include "SomeConfigs.h"
 #include "Sound.h"
 #include "Scores.h"
-#include "GameClock.h"
+#include "TimeClock.h"
 #include "Timers.h"
 
 void setup() {
@@ -20,6 +21,4 @@ void setup() {
 void loop() {
   updateTimers();
   clockLoop();
-  if (digitalRead(2) == LOW && !homeScoring)homeScored();
-  if (digitalRead(3) == LOW && !awayScoring)awayScored();
 }
