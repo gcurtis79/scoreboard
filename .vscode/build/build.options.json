@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "\\src\\Config.h,\\src\\GameModes.h,\\src\\Scores.h,\\src\\Sound.h,\\src\\TimeClock.h,\\src\\Timers.h",
+  "builtInLibrariesFolders": "D:\\Apps\\arduino-1.8.9\\libraries",
+  "customBuildProperties": "build.path=d:\\Arduino\\scoreboard\\.vscode\\build,build.warn_data_percentage=75,runtime.tools.avr-gcc.path=D:\\Apps\\arduino-1.8.9\\hardware\\tools\\avr,runtime.tools.avr-gcc-5.4.0-atmel3.6.1-arduino2.path=D:\\Apps\\arduino-1.8.9\\hardware\\tools\\avr,runtime.tools.arduinoOTA.path=D:\\Apps\\arduino-1.8.9\\hardware\\tools\\avr,runtime.tools.arduinoOTA-1.2.1.path=D:\\Apps\\arduino-1.8.9\\hardware\\tools\\avr,runtime.tools.avrdude.path=D:\\Apps\\arduino-1.8.9\\hardware\\tools\\avr,runtime.tools.avrdude-6.3.0-arduino14.path=D:\\Apps\\arduino-1.8.9\\hardware\\tools\\avr",
+  "fqbn": "arduino:avr:nano:cpu=atmega328",
+  "hardwareFolders": "D:\\Apps\\arduino-1.8.9\\hardware,C:\\Users\\gcurtis79\\AppData\\Local\\Arduino15\\packages,D:\\Arduino\\hardware",
+  "otherLibrariesFolders": "D:\\Arduino\\libraries",
+  "runtime.ide.version": "10809",
+  "sketchLocation": "d:\\Arduino\\scoreboard\\Scoreboard.ino",
+  "toolsFolders": "D:\\Apps\\arduino-1.8.9\\tools-builder,D:\\Apps\\arduino-1.8.9\\hardware\\tools\\avr,C:\\Users\\gcurtis79\\AppData\\Local\\Arduino15\\packages"
+}

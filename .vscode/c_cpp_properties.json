@@ -10,8 +10,9 @@
                 "D:/Apps/arduino-1.8.9/hardware/tools/avr/avr/include/**",
                 "D:/Apps/arduino-1.8.9/libraries/**",
                 "D:/Arduino/libraries/**",
+                "${workspaceFolder}/**",
                 "${workspaceFolder}/src",
-                "${workspaceFolder}/**"
+                "${workspaceRoot}"
             ],
             "defines": [
                 "_DEBUG",
@@ -31,8 +32,9 @@
                     "D:/Apps/arduino-1.8.9/hardware/tools/avr/avr/include",
                     "D:/Apps/arduino-1.8.9/libraries",
                     "D:/Arduino/libraries",
+                    "${workspaceFolder}",
                     "${workspaceFolder}/src",
-                    "${workspaceFolder}"
+                    "${workspaceRoot}"
                     ]
             },
             "forcedInclude": [

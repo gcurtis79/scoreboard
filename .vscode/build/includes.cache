@@ -1,0 +1,122 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "D:\\Apps\\arduino-1.8.9\\hardware\\arduino\\avr\\cores\\arduino"
+  },
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "D:\\Apps\\arduino-1.8.9\\hardware\\arduino\\avr\\variants\\eightanaloginputs"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "SD.h",
+    "Includepath": "D:\\Apps\\arduino-1.8.9\\libraries\\SD\\src"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "D:\\Apps\\arduino-1.8.9\\hardware\\arduino\\avr\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "TMRpcm.h",
+    "Includepath": "D:\\Arduino\\libraries\\TMRpcm"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "EveryTimer.h",
+    "Includepath": "D:\\Arduino\\libraries\\EveryTimer\\src"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "D:\\Apps\\arduino-1.8.9\\hardware\\arduino\\avr\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "Adafruit_MCP23017.h",
+    "Includepath": "D:\\Arduino\\libraries\\Adafruit_MCP23017_Arduino_Library"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "TM1637.h",
+    "Includepath": "D:\\Arduino\\libraries\\Grove_4-Digit_Display"
+  },
+  {
+    "Sourcefile": "d:\\Arduino\\scoreboard\\.vscode\\build\\sketch\\Scoreboard.ino.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\libraries\\SD\\src\\File.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\libraries\\SD\\src\\SD.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\libraries\\SD\\src\\utility\\Sd2Card.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\libraries\\SD\\src\\utility\\SdFile.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\libraries\\SD\\src\\utility\\SdVolume.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\hardware\\arduino\\avr\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\TMRpcm\\TMRpcm.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\TMRpcm\\pcmRF.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\EveryTimer\\src\\EveryTimer.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\EveryTimer\\src\\OneShotTimer.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\hardware\\arduino\\avr\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Apps\\arduino-1.8.9\\hardware\\arduino\\avr\\libraries\\Wire\\src\\utility\\twi.c",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\Adafruit_MCP23017_Arduino_Library\\Adafruit_MCP23017.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "D:\\Arduino\\libraries\\Grove_4-Digit_Display\\TM1637.cpp",
+    "Include": "",
+    "Includepath": ""
+  }
+]
