@@ -1,3 +1,4 @@
+#include <EveryTimer.h>
 #include <Wire.h>
 #include <Adafruit_MCP23017.h>
 
@@ -7,7 +8,7 @@ uint8_t homeScore = 00;
 uint8_t awayScore = 00;
 volatile bool homeScoring = false;
 volatile bool awayScoring = false;
-const byte ap[6] = { A0, A1, A2, A3, A6, A7 };
+const byte ap[4] = PERIOD_LED_PINS;
 const byte aps[2] = { HIGH, LOW };
 
 uint16_t digitR[10] = {
@@ -37,13 +38,14 @@ uint16_t digitL[10] = {
 };
 
 void partyMode() {
-  for (int i = 0; i < 50; i++) {
+  DEBUG_PRINT("PartyMode");
+  for (int i = 0; i < 100; i++) {
     mcp.writeGPIOAB((random(B0000000, B1111111) << 9) + (random(B00, B10) << 7) + random(B0000000, B1111111));
     digitalWrite(ap[random(0, 6)], aps[random(1, 3)]);
     delay(25);
     if (!digitalRead(2) || !digitalRead(3))i = 0;
   }
-  for (int i = 0; i < 7; i++)digitalWrite(ap[i], 0);
+  for (int i = 0; i < 4; i++)digitalWrite(ap[i], 0);
   if (homeScoring)homeScore++;
   if (awayScoring)awayScore++;
   homeScoring = false;
@@ -51,22 +53,29 @@ void partyMode() {
 }
 
 void homeScored() {
+  DEBUG_PRINT("Home scored");
   homeScoring = true;
 }
 
 void awayScored() {
+  DEBUG_PRINT("Away scored");
   awayScoring = true;
 }
 
-void mcpInit() {
+void scoreInit() {
+  DEBUG_PRINT("Scores Init");
+  DEBUG_PRINT("PinModes");
+  pinMode(2, INPUT_PULLUP);
+  pinMode(3, INPUT_PULLUP);
+  delay(100);
+  DEBUG_PRINT("MCP Begin");
   mcp.begin();
+  DEBUG_PRINT("MCP23017 Initialized");
   for (int i = 0; i <= 15; i++) {
     mcp.pinMode(i, OUTPUT);
     mcp.digitalWrite(i, LOW);
   }
-  for (int i = 0; i < 7; i++)pinMode(ap[i], OUTPUT);
-  pinMode(2, INPUT_PULLUP);
-  pinMode(3, INPUT_PULLUP);
+  for (int i = 0; i < 4; i++)pinMode(ap[i], OUTPUT);
   homeScoring = false;
   awayScoring = false;
   attachInterrupt(digitalPinToInterrupt(2), homeScored, FALLING);
@@ -79,6 +88,7 @@ void showScores() {
   if (homeScore > 99)homeScore = 0;
   if (awayScore > 99)awayScore = 0;
   if (homeScoring || awayScoring) {
+    snd.play("goal.wav");
     partyMode();
   }
   int homeOne = homeScore / 10;

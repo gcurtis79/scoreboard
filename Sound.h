@@ -1,50 +1,18 @@
-#include "AudioFileSourceSPIFFS.h"
-#include "AudioFileSourceID3.h"
-#include "AudioGeneratorMP3.h"
-#include "AudioOutputI2SNoDAC.h"
+#include <SD.h>
+#include <SPI.h>
 
-AudioGeneratorMP3 *mp3;
-AudioFileSourceSPIFFS *file;
-AudioOutputI2SNoDAC *out;
-AudioFileSourceID3 *id3;
+#include <TMRpcm.h>
 
-void MDCallback(void *cbData, const char *type, bool isUnicode, const char *string)
-{
-  (void)cbData;
-  Serial.printf("ID3 callback for: %s = '", type);
+TMRpcm snd;
 
-  if (isUnicode) {
-    string += 2;
-  }
-  
-  while (*string) {
-    char a = *(string++);
-    if (isUnicode) {
-      string++;
+void soundInit() {
+  snd.speakerPin = SPK_PIN;
+  if (!SD.begin()) {
+    DEBUG_PRINT("SD Failed");
+    for (int i = 0; i < 3; i++) {
+      tone(9, 100, 75);
+      delay(150);
     }
-    Serial.printf("%c", a);
-  }
-  Serial.printf("'\n");
-  Serial.flush();
-}
-
-void soundInit()
-{
-  SPIFFS.begin();
-  dd(3,"Sample MP3 playback begins...");
-  file = new AudioFileSourceSPIFFS("/goal.mp3");
-  id3 = new AudioFileSourceID3(file);
-  id3->RegisterMetadataCB(MDCallback, (void*)"ID3TAG");
-  out = new AudioOutputI2SNoDAC();
-  mp3 = new AudioGeneratorMP3();
-  mp3->begin(id3, out);
-}
-
-void playSND()
-{
-  if (mp3->isRunning()) {
-    if (!mp3->playSND()) mp3->stop();
-  } else {
-    dd(3, "Done playing...");
+    return;
   }
 }

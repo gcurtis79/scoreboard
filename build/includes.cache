@@ -1,0 +1,142 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266"
+  },
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/variants/d1_mini"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Wire"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "ArduinoOTA.h",
+    "Includepath": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ArduinoOTA"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "ESP8266WiFi.h",
+    "Includepath": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "ESP8266mDNS.h",
+    "Includepath": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266mDNS"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "Adafruit_MCP23017.h",
+    "Includepath": "/home/gcurtis79/Arduino/libraries/Adafruit_MCP23017_Arduino_Library"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "EveryTimer.h",
+    "Includepath": "/home/gcurtis79/Arduino/libraries/EveryTimer/src"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "TimeLib.h",
+    "Includepath": "/home/gcurtis79/Arduino/libraries/Time"
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/ScoreTest/build/sketch/ScoreTest.ino.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Wire/Wire.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ArduinoOTA/ArduinoOTA.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/ESP8266WiFi.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/ESP8266WiFiAP.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/ESP8266WiFiGeneric.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/ESP8266WiFiMulti.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/ESP8266WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/ESP8266WiFiScan.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/WiFiClient.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/WiFiClientSecure.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/WiFiServer.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/.arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266mDNS/ESP8266mDNS.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/libraries/Adafruit_MCP23017_Arduino_Library/Adafruit_MCP23017.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/libraries/EveryTimer/src/EveryTimer.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/libraries/EveryTimer/src/OneShotTimer.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/libraries/Time/DateStrings.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/gcurtis79/Arduino/libraries/Time/Time.cpp",
+    "Include": "",
+    "Includepath": ""
+  }
+]

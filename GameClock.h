@@ -9,9 +9,8 @@ unsigned char minute = 0;
 unsigned char hour = 12;
 uint8_t brightness = 0;
 
-
-#define CLK 4
-#define DIO 5
+#define CLK CLOCK_CLK_PIN
+#define DIO CLOCK_DIO_PIN
 
 TM1637 clockDisp(CLK, DIO);
 
@@ -48,6 +47,7 @@ void clockLoop() {
 }
 
 void clockInit(){
+  DEBUG_PRINT("GameClock Init");
   clockDisp.set(2);
   clockDisp.init();
 }
