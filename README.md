@@ -18,18 +18,23 @@ I plan on making it run on an ESP8266/ESP32, but the 4-digit display/clock libra
 
 Very much a work in progress.
 
+Almost fully non-blocking. When a score is made, there is blocking for about 2 seconds while the scoreboard randomly does flashy lights, but the audio playing is not blocked.
+
 Working:
-* Score display with almost no flicker
-    * There is a flick every half second then the clock updates
-* Score tracking via interrupt pins
+* Score display
+    * Score tracking via interrupt pins
 * "Party mode" when score happens
     * "Party mode" holds untill pin release in case puck gets stuck
+* Game Mode selection (Score limit based)
+* Reset button code
+* Dual speaker (2" 4Ohm 3W) and amplifier
+    * Also added volume knob (Mini air-hockey paddle)
+
+![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/Paddle-Knob.jpg "Air Hockey Puck Knob")
 
 Sorta working:
-* A clock that counts up (will count down later)
+* A clock that counts up (game based on score, not time)
 
 ToDo:
-* Make clock count periods and end game
-* Mode and start button functions (period time, goal limit)
-* Add sound output for startup, scoring, and end period/game
-* Connect a beam-break style goal detection
+* Make clock run correctly
+* Connect a beam-break style goal detection (Currently just a button)
