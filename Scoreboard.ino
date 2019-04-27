@@ -1,3 +1,11 @@
+#include <SD.h>
+#include <SPI.h>
+#include <Wire.h>
+#include <ErriezTM1637.h>
+#include <TMRpcm.h>
+#include <EveryTimer.h>
+#include <Adafruit_MCP23017.h>
+
 #include "src/Config.h"
 #include "src/GameModes.h"
 #include "src/Sound.h"
@@ -5,20 +13,37 @@
 #include "src/TimeClock.h"
 #include "src/Timers.h"
 
-void setup() {
-  #ifdef SERIAL_DEBUG
+void setup()
+{
+#ifdef SERIAL_DEBUG
   Serial.begin(SERIAL_DEBUG);
   delay(1000);
   DEBUG_PRINT("Startup");
-  #endif
+#endif
   soundInit();
   scoreInit();
   clockInit();
-  startTimers();
+  modeInit();
+  timersInit();
   DEBUG_PRINT("Init Done");
+  DEBUG_PRINT(millis());
 }
 
-void loop() {
+void loop()
+{
+  if (digitalRead(6) == LOW)
+  {
+    display.clear();
+    while (digitalRead(6) == LOW)
+      ;
+    modeSelect();
+  }
+  if (digitalRead(7) == LOW)
+  {
+    while (digitalRead(7) == HIGH)
+      ;
+    gameReset();
+  }
   updateTimers();
-  clockLoop();
+  //clockLoop();
 }

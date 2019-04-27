@@ -1,53 +1,96 @@
-#include <TM1637.h>
-
-int8_t TimeDisp[] = {0x00, 0x00, 0x00, 0x00};
-unsigned char ClockPoint = 1;
-unsigned char doUpdate;
-unsigned char halfsecond = 0;
-unsigned char second;
-unsigned char minute = 0;
-unsigned char hour = 12;
-uint8_t brightness = 0;
-
-#define CLK CLOCK_CLK_PIN
-#define DIO CLOCK_DIO_PIN
-
-TM1637 clockDisp(CLK, DIO);
-
-void Timing() {
-  halfsecond ++;
-  doUpdate = 1;
-  if (halfsecond == 2) {
-    second ++;
-    if (second == 60) {
-      minute++;
-      second = 0;
-    }
-    if (minute == 60)minute = 0;
-    halfsecond = 0;
-  }
-  ClockPoint = (~ClockPoint) & 0x01;
-}
-
-void TimeUpdate(void) {
-  if (ClockPoint)clockDisp.point(POINT_ON);
-  else clockDisp.point(POINT_OFF);
-  TimeDisp[0] = minute / 10;
-  TimeDisp[1] = minute % 10;
-  TimeDisp[2] = second / 10;
-  TimeDisp[3] = second % 10;
-  doUpdate = 0;
-}
-
-void clockLoop() {
-  if (doUpdate == 1) {
-    TimeUpdate();
-    clockDisp.display(TimeDisp);
-  }
-}
-
-void clockInit(){
+void clockInit()
+{
   DEBUG_PRINT("GameClock Init");
-  clockDisp.set(2);
-  clockDisp.init();
+  display.begin();
+  display.clear();
+  display.setBrightness(3);
+  display.displayOn();
+  pinMode(6, INPUT_PULLUP);
+  pinMode(7, INPUT_PULLUP);
+}
+
+void spinners()
+{
+  int8_t spinner[] = {B0000001, B00000010, B00000100, B00001000, B00010000, B00100000};
+  if (spinSegment > 5)
+  {
+    spinSegment = 0;
+  }
+  for (uint8_t s = 0; s < 4; s++)
+  {
+    display.writeData(s, spinner[spinSegment]);
+  }
+  spinSegment++;
+}
+
+void dispTime()
+{
+  //HEX Digits     0     1     2     3     4     5     6     7     8     9
+  byte nums[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
+  TimeDisp[0] = nums[(minute / 10)];
+  TimeDisp[1] = ((tickTock && !menu) ? nums[(minute % 10)] : (nums[(minute % 10)] + 0x80));
+  TimeDisp[2] = nums[(second / 10)];
+  TimeDisp[3] = nums[(second % 10)];
+  display.writeData(0, TimeDisp, sizeof(TimeDisp));
+}
+
+void timesUp()
+{
+  if (tickTock)
+  {
+    dispTime();
+  }
+  else
+  {
+    display.clear();
+  }
+}
+
+void Timing()
+{
+  tockTick = !tockTick;
+  if (tockTick)
+  {
+    DEBUG_PRINT("tockTick");
+    tickTock = !tickTock;
+  }
+  if (tickTock)
+  {
+    DEBUG_PRINT("tickTock");
+    if (menu)
+    {
+      minute = maxTime;
+      second = 0;
+      endGame = 0;
+      dispTime();
+      return;
+    }
+    else if (endGame)
+    {
+      timesUp();
+      return;
+    }
+    else
+    {
+      if (minute == maxTime)
+      {
+        endGame = 1;
+        timesUp();
+        return;
+      }
+      second++;
+      if (second == 60)
+      {
+        minute++;
+        second = 0;
+      }
+      dispTime();
+    }
+  }
+}
+
+void startClock()
+{
+    minute = 0;
+    second = 0;
 }
