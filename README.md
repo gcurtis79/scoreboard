@@ -30,7 +30,7 @@ Working:
 * Dual speaker (2" 4Ohm 3W) and amplifier
     * Also added volume knob (Mini air-hockey paddle)
 
-![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/Puck-Knob.jpg "Air Hockey Puck Knob")
+![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/Paddle-Knob.jpg "Air Hockey Puck Knob")
 
 Sorta working:
 * A clock that counts up (will count down later)
