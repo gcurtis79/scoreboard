@@ -33,8 +33,8 @@ Working:
 ![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/Paddle-Knob.jpg "Air Hockey Puck Knob")
 
 Sorta working:
-* A clock that counts up (will count down later)
+* A clock that counts up (game based on score, not time)
 
 ToDo:
-* Make clock count periods and end game
-* Connect a beam-break style goal detection
+* Make clock run correctly
+* Connect a beam-break style goal detection (Currently just a button)
