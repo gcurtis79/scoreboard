@@ -1,6 +1,5 @@
 void clockInit()
 {
-  DEBUG_PRINT("GameClock Init");
   display.begin();
   display.clear();
   display.setBrightness(3);
@@ -48,49 +47,41 @@ void timesUp()
 
 void Timing()
 {
-  tockTick = !tockTick;
-  if (tockTick)
+  tickTock = !tickTock;
+  if (menu)
   {
-    DEBUG_PRINT("tockTick");
-    tickTock = !tickTock;
+    minute = maxTime;
+    second = 0;
+    endGame = 0;
+    dispTime();
+    return;
   }
-  if (tickTock)
+  else if (endGame)
   {
-    DEBUG_PRINT("tickTock");
-    if (menu)
+    timesUp();
+    return;
+  }
+  else
+  {
+    if (minute == maxTime)
     {
-      minute = maxTime;
-      second = 0;
-      endGame = 0;
-      dispTime();
-      return;
-    }
-    else if (endGame)
-    {
+      endGame = 1;
       timesUp();
       return;
     }
-    else
-    {
-      if (minute == maxTime)
-      {
-        endGame = 1;
-        timesUp();
-        return;
-      }
+    if (tickTock)
       second++;
-      if (second == 60)
-      {
-        minute++;
-        second = 0;
-      }
-      dispTime();
+    if (second == 60)
+    {
+      minute++;
+      second = 0;
     }
+    dispTime();
   }
 }
 
 void startClock()
 {
-    minute = 0;
-    second = 0;
+  minute = 0;
+  second = 0;
 }

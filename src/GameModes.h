@@ -46,7 +46,6 @@ void modeSet()
 
 void modeInit()
 {
-  DEBUG_PRINT("GameModes Init");
   pinMode(2, INPUT_PULLUP);
   pinMode(3, INPUT_PULLUP);
   modeSet();
@@ -70,7 +69,6 @@ void modeSelect()
   if (gameMode > 3)
     gameMode = 0;
   modeSet();
-  DEBUG_PRINT(gameMode);
 }
 
 void gameReset()

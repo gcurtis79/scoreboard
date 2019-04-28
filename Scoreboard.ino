@@ -18,15 +18,12 @@ void setup()
 #ifdef SERIAL_DEBUG
   Serial.begin(SERIAL_DEBUG);
   delay(1000);
-  DEBUG_PRINT("Startup");
 #endif
   soundInit();
   scoreInit();
   clockInit();
   modeInit();
   timersInit();
-  DEBUG_PRINT("Init Done");
-  DEBUG_PRINT(millis());
 }
 
 void loop()

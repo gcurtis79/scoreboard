@@ -26,13 +26,10 @@ const byte digitL[] = {
 
 void partyMode()
 {
-  DEBUG_PRINT("PartyMode");
-  homeScoring = false;
-  awayScoring = false;
   for (uint8_t i = 0; i < 100; i++)
   {
     mcp.writeGPIOAB((random(B0000000, B1111111) << 9) + (random(B00, B10) << 7) + random(B0000000, B1111111));
-    digitalWrite(ap[random(0, 4)], random(0,2));
+    digitalWrite(ap[random(0, 4)], random(0, 2));
     delay(25);
     if (!digitalRead(2) || !digitalRead(3))
       i = 0;
@@ -42,26 +39,12 @@ void partyMode()
     digitalWrite(ap[i], 0);
   }
   digitalWrite(ap[gameMode], HIGH);
-  if ((homeScore >= maxScore || awayScore >= maxScore))
-  {
-    endGame = 1;
-    return;
-  }
-  if (homeScoring)
-  {
-    homeScore++;
-  }
-  if (awayScoring)
-  {
-    awayScore++;
-  }
 }
 
 void homeScored()
 {
   if (millis() > 2000 && !endGame)
   {
-    DEBUG_PRINT("Home scored");
     homeScoring = true;
   }
 }
@@ -70,21 +53,16 @@ void awayScored()
 {
   if (millis() > 2000 && !endGame)
   {
-    DEBUG_PRINT("Away scored");
     awayScoring = true;
   }
 }
 
 void scoreInit()
 {
-  DEBUG_PRINT("Scores Init");
-  DEBUG_PRINT("PinModes");
   pinMode(2, INPUT_PULLUP);
   pinMode(3, INPUT_PULLUP);
   delay(100);
-  DEBUG_PRINT("MCP Begin");
   mcp.begin();
-  DEBUG_PRINT("MCP23017 Initialized");
   for (uint8_t i = 0; i <= 15; i++)
   {
     mcp.pinMode(i, OUTPUT);
@@ -96,8 +74,8 @@ void scoreInit()
   }
   homeScoring = false;
   awayScoring = false;
-  attachInterrupt(digitalPinToInterrupt(2), homeScored, FALLING);
-  attachInterrupt(digitalPinToInterrupt(3), awayScored, FALLING);
+  attachInterrupt(digitalPinToInterrupt(2), homeScored, LOW);
+  attachInterrupt(digitalPinToInterrupt(3), awayScored, LOW);
 }
 
 void showScores()
@@ -119,8 +97,23 @@ void showScores()
     }
     else
     {
+      if (homeScoring)
+      {
+        homeScore++;
+      }
+      if (awayScoring)
+      {
+        awayScore++;
+      }
       snd.play("goal.wav");
       partyMode();
+      homeScoring = 0;
+      awayScoring = 0;
+    }
+    if ((homeScore >= maxScore || awayScore >= maxScore))
+    {
+      endGame = 1;
+      return;
     }
   }
   uint8_t homeOne = homeScore / 10;

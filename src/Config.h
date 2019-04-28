@@ -3,7 +3,7 @@
 //HardwareSerial Serial;
 
 // Set serial debugging on/off with baud - Comment to disable
-#define SERIAL_DEBUG 115200
+//#define SERIAL_DEBUG 115200
 #ifdef SERIAL_DEBUG
 #define DEBUG_PRINT(x) Serial.println(x)
 #else
@@ -47,7 +47,6 @@ TMRpcm snd;
 TM1637 display(CLOCK_CLK_PIN, CLOCK_DIO_PIN);
 uint8_t TimeDisp[4];
 bool tickTock = 0;
-bool tockTick = 0;
 int8_t second = 0;
 int8_t minute = 0;
 uint8_t spinSegment = 0;
