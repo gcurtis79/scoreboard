@@ -37,4 +37,3 @@ Sorta working:
 ToDo:
 * Connect a beam-break style goal detection (Currently just a button)
 * Make a low-pass filter for audio
-

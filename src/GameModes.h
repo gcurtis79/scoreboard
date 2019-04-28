@@ -54,7 +54,7 @@ void modeInit()
 void startClock(void); // Prototype for TimeClock.h (not loaded yet)
 void startGame()
 {
-  snd.play("start.wav");
+  snd.play("charge.wav");
   menu = 0;
   homeScore = 0;
   homeScoring = 0;
