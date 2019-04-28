@@ -24,17 +24,17 @@ Working:
 * Score display
     * Score tracking via interrupt pins
 * "Party mode" when score happens
-    * "Party mode" holds untill pin release in case puck gets stuck
 * Game Mode selection (Score limit based)
 * Reset button code
+* A clock that counts up (game based on score, not time)
 * Dual speaker (2" 4Ohm 3W) and amplifier
     * Also added volume knob (Mini air-hockey paddle)
 
-![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/Paddle-Knob.jpg "Air Hockey Puck Knob")
+![alt text](https://raw.githubusercontent.com/gcurtis79/scoreboard/master/images/Paddle-Knob.jpg "Air Hockey Paddle Knob")
 
 Sorta working:
-* A clock that counts up (game based on score, not time)
 
 ToDo:
-* Make clock run correctly
 * Connect a beam-break style goal detection (Currently just a button)
+* Make a low-pass filter for audio
+
